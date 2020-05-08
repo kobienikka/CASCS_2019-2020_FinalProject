@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BD776E52465B91C0089F4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD776E42465B91C0089F4E3 /* AppDelegate.swift */; };
+		8BD776E72465B91C0089F4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD776E62465B91C0089F4E3 /* SceneDelegate.swift */; };
+		8BD776E92465B91C0089F4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD776E82465B91C0089F4E3 /* ViewController.swift */; };
+		8BD776EC2465B91C0089F4E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD776EA2465B91C0089F4E3 /* Main.storyboard */; };
+		8BD776EE2465B9250089F4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD776ED2465B9250089F4E3 /* Assets.xcassets */; };
+		8BD776F12465B9250089F4E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD776EF2465B9250089F4E3 /* LaunchScreen.storyboard */; };
+		8BD776FF2465BC040089F4E3 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD776FE2465BC040089F4E3 /* Messages.framework */; };
+		8BD777022465BC040089F4E3 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD777012465BC040089F4E3 /* MessagesViewController.swift */; };
+		8BD777052465BC040089F4E3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD777032465BC040089F4E3 /* MainInterface.storyboard */; };
+		8BD777072465BC0A0089F4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD777062465BC0A0089F4E3 /* Assets.xcassets */; };
+		8BD7770B2465BC0B0089F4E3 /* iMessage Ext.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8BD776FC2465BC040089F4E3 /* iMessage Ext.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8BD777112465C4CB0089F4E3 /* IMG_0426.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8BD777102465C4CB0089F4E3 /* IMG_0426.JPG */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BD777092465BC0B0089F4E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD776D92465B91C0089F4E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD776FB2465BC040089F4E3;
+			remoteInfo = "iMessage Ext";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BD7770F2465BC0B0089F4E3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8BD7770B2465BC0B0089F4E3 /* iMessage Ext.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8BD776E12465B91C0089F4E3 /* MothersDayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MothersDayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD776E42465B91C0089F4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BD776E62465B91C0089F4E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8BD776E82465B91C0089F4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BD776EB2465B91C0089F4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BD776ED2465B9250089F4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BD776F02465B9250089F4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BD776F22465B9250089F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD776FC2465BC040089F4E3 /* iMessage Ext.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iMessage Ext.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD776FE2465BC040089F4E3 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		8BD777012465BC040089F4E3 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		8BD777042465BC040089F4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8BD777062465BC0A0089F4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BD777082465BC0A0089F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD777102465C4CB0089F4E3 /* IMG_0426.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0426.JPG; path = "../../../../../baby photos/IMG_0426.JPG"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BD776DE2465B91C0089F4E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD776F92465BC040089F4E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD776FF2465BC040089F4E3 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BD776D82465B91C0089F4E3 = {
+			isa = PBXGroup;
+			children = (
+				8BD776E32465B91C0089F4E3 /* MothersDayApp */,
+				8BD777002465BC040089F4E3 /* iMessage Ext */,
+				8BD776FD2465BC040089F4E3 /* Frameworks */,
+				8BD776E22465B91C0089F4E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BD776E22465B91C0089F4E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BD776E12465B91C0089F4E3 /* MothersDayApp.app */,
+				8BD776FC2465BC040089F4E3 /* iMessage Ext.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BD776E32465B91C0089F4E3 /* MothersDayApp */ = {
+			isa = PBXGroup;
+			children = (
+				8BD776E42465B91C0089F4E3 /* AppDelegate.swift */,
+				8BD776E62465B91C0089F4E3 /* SceneDelegate.swift */,
+				8BD776E82465B91C0089F4E3 /* ViewController.swift */,
+				8BD776EA2465B91C0089F4E3 /* Main.storyboard */,
+				8BD776ED2465B9250089F4E3 /* Assets.xcassets */,
+				8BD776EF2465B9250089F4E3 /* LaunchScreen.storyboard */,
+				8BD776F22465B9250089F4E3 /* Info.plist */,
+			);
+			path = MothersDayApp;
+			sourceTree = "<group>";
+		};
+		8BD776FD2465BC040089F4E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BD776FE2465BC040089F4E3 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BD777002465BC040089F4E3 /* iMessage Ext */ = {
+			isa = PBXGroup;
+			children = (
+				8BD777012465BC040089F4E3 /* MessagesViewController.swift */,
+				8BD777032465BC040089F4E3 /* MainInterface.storyboard */,
+				8BD777102465C4CB0089F4E3 /* IMG_0426.JPG */,
+				8BD777062465BC0A0089F4E3 /* Assets.xcassets */,
+				8BD777082465BC0A0089F4E3 /* Info.plist */,
+			);
+			path = "iMessage Ext";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BD776E02465B91C0089F4E3 /* MothersDayApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD776F52465B9250089F4E3 /* Build configuration list for PBXNativeTarget "MothersDayApp" */;
+			buildPhases = (
+				8BD776DD2465B91C0089F4E3 /* Sources */,
+				8BD776DE2465B91C0089F4E3 /* Frameworks */,
+				8BD776DF2465B91C0089F4E3 /* Resources */,
+				8BD7770F2465BC0B0089F4E3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD7770A2465BC0B0089F4E3 /* PBXTargetDependency */,
+			);
+			name = MothersDayApp;
+			productName = MothersDayApp;
+			productReference = 8BD776E12465B91C0089F4E3 /* MothersDayApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BD776FB2465BC040089F4E3 /* iMessage Ext */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD7770C2465BC0B0089F4E3 /* Build configuration list for PBXNativeTarget "iMessage Ext" */;
+			buildPhases = (
+				8BD776F82465BC040089F4E3 /* Sources */,
+				8BD776F92465BC040089F4E3 /* Frameworks */,
+				8BD776FA2465BC040089F4E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iMessage Ext";
+			productName = "iMessage Ext";
+			productReference = 8BD776FC2465BC040089F4E3 /* iMessage Ext.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BD776D92465B91C0089F4E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Kobie Nikka";
+				TargetAttributes = {
+					8BD776E02465B91C0089F4E3 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					8BD776FB2465BC040089F4E3 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8BD776DC2465B91C0089F4E3 /* Build configuration list for PBXProject "MothersDayApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BD776D82465B91C0089F4E3;
+			productRefGroup = 8BD776E22465B91C0089F4E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BD776E02465B91C0089F4E3 /* MothersDayApp */,
+				8BD776FB2465BC040089F4E3 /* iMessage Ext */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BD776DF2465B91C0089F4E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD776F12465B9250089F4E3 /* LaunchScreen.storyboard in Resources */,
+				8BD776EE2465B9250089F4E3 /* Assets.xcassets in Resources */,
+				8BD776EC2465B91C0089F4E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD776FA2465BC040089F4E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD777112465C4CB0089F4E3 /* IMG_0426.JPG in Resources */,
+				8BD777072465BC0A0089F4E3 /* Assets.xcassets in Resources */,
+				8BD777052465BC040089F4E3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BD776DD2465B91C0089F4E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD776E92465B91C0089F4E3 /* ViewController.swift in Sources */,
+				8BD776E52465B91C0089F4E3 /* AppDelegate.swift in Sources */,
+				8BD776E72465B91C0089F4E3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD776F82465BC040089F4E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD777022465BC040089F4E3 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BD7770A2465BC0B0089F4E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BD776FB2465BC040089F4E3 /* iMessage Ext */;
+			targetProxy = 8BD777092465BC0B0089F4E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BD776EA2465B91C0089F4E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD776EB2465B91C0089F4E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8BD776EF2465B9250089F4E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD776F02465B9250089F4E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8BD777032465BC040089F4E3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD777042465BC040089F4E3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BD776F32465B9250089F4E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8BD776F42465B9250089F4E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BD776F62465B9250089F4E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WDD37DUBTL;
+				INFOPLIST_FILE = MothersDayApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobienikka.MothersDayApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BD776F72465B9250089F4E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WDD37DUBTL;
+				INFOPLIST_FILE = MothersDayApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobienikka.MothersDayApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8BD7770D2465BC0B0089F4E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WDD37DUBTL;
+				INFOPLIST_FILE = "iMessage Ext/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobienikka.MothersDayApp.iMessage-Ext";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BD7770E2465BC0B0089F4E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WDD37DUBTL;
+				INFOPLIST_FILE = "iMessage Ext/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobienikka.MothersDayApp.iMessage-Ext";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BD776DC2465B91C0089F4E3 /* Build configuration list for PBXProject "MothersDayApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD776F32465B9250089F4E3 /* Debug */,
+				8BD776F42465B9250089F4E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD776F52465B9250089F4E3 /* Build configuration list for PBXNativeTarget "MothersDayApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD776F62465B9250089F4E3 /* Debug */,
+				8BD776F72465B9250089F4E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD7770C2465BC0B0089F4E3 /* Build configuration list for PBXNativeTarget "iMessage Ext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD7770D2465BC0B0089F4E3 /* Debug */,
+				8BD7770E2465BC0B0089F4E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BD776D92465B91C0089F4E3 /* Project object */;
+}
