@@ -12,13 +12,41 @@ import Messages
 class MessagesViewController: MSMessagesAppViewController {
     
     @IBOutlet weak var label: UILabel!
-    @IBAction func button(_ sender: Any) {
-        label.text = "Hello World!"
+    @IBAction func foodButton(_ sender: Any) {
+        label.text = "Food successfully requested"
         
         //appearance of message
         let layout = MSMessageTemplateLayout()
-        layout.caption = "HELLO WORLD!"
-        layout.image = UIImage(named: "IMG_0426.JPG")
+        layout.caption = "I need FOOOOD! please:)"
+        layout.image = UIImage(named: "food.JPG")
+        
+        let message = MSMessage()
+        message.layout = layout
+        
+        activeConversation?.insert(message, completionHandler: nil)
+    }
+    
+    @IBAction func laundryButton(_ sender: Any) {
+        label.text = "Laundry successfully requested"
+        
+        //appearance of message
+        let layout = MSMessageTemplateLayout()
+        layout.caption = "My hamper is looking like Mt. Everest! please help!!:)"
+        layout.image = UIImage(named: "laundry.JPG")
+        
+        let message = MSMessage()
+        message.layout = layout
+        
+        activeConversation?.insert(message, completionHandler: nil)
+    }
+    
+    @IBAction func presenceButton(_ sender: Any) {
+        label.text = "mom successfully requested"
+        
+        //appearance of message
+        let layout = MSMessageTemplateLayout()
+        layout.caption = "Your presence has been requested:)"
+        layout.image = UIImage(named: "momClipart.JPG")
         
         let message = MSMessage()
         message.layout = layout

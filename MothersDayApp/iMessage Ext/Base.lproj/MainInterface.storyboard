@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-L1-FPJ">
-                                <rect key="frame" x="37" y="170" width="246" height="30"/>
+                                <rect key="frame" x="37" y="205" width="246" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="Vy2-ap-Qae"/>
                                     <constraint firstAttribute="height" constant="30" id="yDK-HC-miG"/>
@@ -25,24 +25,65 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
-                                <rect key="frame" x="117.5" y="249" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
+                                <rect key="frame" x="108" y="269" width="104" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2zB-aw-eOk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="GJr-z0-rKG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="Qgg-PI-HDw"/>
                                     <constraint firstAttribute="width" constant="85" id="bMI-S6-Jg0"/>
                                 </constraints>
-                                <state key="normal" title="Say Hello"/>
+                                <state key="normal" title="Request Food"/>
                                 <connections>
-                                    <action selector="button:" destination="ObA-dk-sSI" eventType="touchUpInside" id="hQK-RX-Zer"/>
+                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="hQK-RX-Zer"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-jj-8fb">
+                                <rect key="frame" x="91" y="385" width="139" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Aul-YQ-kB7"/>
+                                    <constraint firstAttribute="width" constant="85" id="HoM-5Q-Jrd"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="133" id="Mx5-rv-ktc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Xfu-aL-yVw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="133" id="diJ-p6-8V6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="pSs-ov-eJn"/>
+                                </constraints>
+                                <state key="normal" title="Request presence"/>
+                                <connections>
+                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="9dW-Pd-FaQ"/>
+                                    <action selector="presenceButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="ADp-3U-JxC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
+                                <rect key="frame" x="86" y="325" width="148" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="0Hl-ce-zCC"/>
+                                    <constraint firstAttribute="width" constant="85" id="9Hs-b6-0oq"/>
+                                    <constraint firstAttribute="height" constant="30" id="DW0-We-5uq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="h0O-5x-iU1"/>
+                                </constraints>
+                                <state key="normal" title="Request laundry"/>
+                                <connections>
+                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Zka-ir-inZ"/>
+                                    <action selector="laundryButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="m3l-6s-4O8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="StW-b6-5MJ" firstAttribute="top" secondItem="lut-FP-3re" secondAttribute="bottom" constant="30" id="7kU-qn-FFh"/>
                             <constraint firstItem="lut-FP-3re" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="8Qr-2X-UE0"/>
                             <constraint firstItem="lut-FP-3re" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="A3g-k9-zNu"/>
+                            <constraint firstItem="HJh-jj-8fb" firstAttribute="top" secondItem="StW-b6-5MJ" secondAttribute="bottom" constant="30" id="DhK-eA-Xg5"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="HJh-jj-8fb" secondAttribute="bottom" constant="30" id="SCR-hi-WB1"/>
                             <constraint firstItem="lut-FP-3re" firstAttribute="top" secondItem="pRf-L1-FPJ" secondAttribute="bottom" constant="49" id="TAL-2e-SAg"/>
+                            <constraint firstItem="HJh-jj-8fb" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="iFF-1H-AaF"/>
+                            <constraint firstItem="lut-FP-3re" firstAttribute="top" secondItem="pRf-L1-FPJ" secondAttribute="bottom" constant="30" id="iL9-7V-a9w"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="HJh-jj-8fb" secondAttribute="bottom" constant="113" id="kZL-Th-rhb"/>
+                            <constraint firstItem="HJh-jj-8fb" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="meq-dD-7fP"/>
+                            <constraint firstItem="StW-b6-5MJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="oFc-zi-yjw"/>
                             <constraint firstItem="pRf-L1-FPJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="rcN-3u-wQg"/>
+                            <constraint firstItem="StW-b6-5MJ" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="s2e-DJ-cIa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
                     </view>
