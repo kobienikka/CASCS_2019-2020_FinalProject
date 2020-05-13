@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B9F7871246C5BF600A2F24E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F7870246C5BF500A2F24E /* MenuViewController.swift */; };
 		8BD776E52465B91C0089F4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD776E42465B91C0089F4E3 /* AppDelegate.swift */; };
 		8BD776E72465B91C0089F4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD776E62465B91C0089F4E3 /* SceneDelegate.swift */; };
 		8BD776E92465B91C0089F4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD776E82465B91C0089F4E3 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		8B9F786B246C510200A2F24E /* momClipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = momClipart.png; path = "/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/momClipart.png"; sourceTree = "<absolute>"; };
 		8B9F786C246C510200A2F24E /* laundry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = laundry.jpg; path = "/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/laundry.jpg"; sourceTree = "<absolute>"; };
 		8B9F786D246C510300A2F24E /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = food.jpg; path = "/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/food.jpg"; sourceTree = "<absolute>"; };
+		8B9F7870246C5BF500A2F24E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/MenuViewController.swift"; sourceTree = "<absolute>"; };
 		8BD776E12465B91C0089F4E3 /* MothersDayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MothersDayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD776E42465B91C0089F4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD776E62465B91C0089F4E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8BD777012465BC040089F4E3 /* MessagesViewController.swift */,
+				8B9F7870246C5BF500A2F24E /* MenuViewController.swift */,
 				8B9F786D246C510300A2F24E /* food.jpg */,
 				8B9F786C246C510200A2F24E /* laundry.jpg */,
 				8B9F786B246C510200A2F24E /* momClipart.png */,
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD777022465BC040089F4E3 /* MessagesViewController.swift in Sources */,
+				8B9F7871246C5BF600A2F24E /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
