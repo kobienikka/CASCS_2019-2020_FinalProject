@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MothersDayApp.xcodeproj">
+      location = "group:/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/food.jpg">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/laundry.jpg">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/momClipart.png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
