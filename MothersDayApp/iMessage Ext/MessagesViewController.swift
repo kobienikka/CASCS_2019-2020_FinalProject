@@ -12,13 +12,14 @@ import Messages
 class MessagesViewController: MSMessagesAppViewController {
     
     @IBOutlet weak var label: UILabel!
+    var seguedMessage = MSMessage()
     @IBAction func foodButton(_ sender: Any) {
         label.text = "Food successfully requested"
         
         //appearance of message
         let layout = MSMessageTemplateLayout()
         layout.caption = "I need FOOOOD! please:)"
-        layout.image = UIImage(named: "food.JPG")
+        layout.image = UIImage(named: "food.jpg")
         
         let message = MSMessage()
         message.layout = layout
@@ -32,7 +33,7 @@ class MessagesViewController: MSMessagesAppViewController {
         //appearance of message
         let layout = MSMessageTemplateLayout()
         layout.caption = "My hamper is looking like Mt. Everest! please help!!:)"
-        layout.image = UIImage(named: "laundry.JPG")
+        layout.image = UIImage(named: "laundry.jpg")
         
         let message = MSMessage()
         message.layout = layout
@@ -46,17 +47,21 @@ class MessagesViewController: MSMessagesAppViewController {
         //appearance of message
         let layout = MSMessageTemplateLayout()
         layout.caption = "Your presence has been requested:)"
-        layout.image = UIImage(named: "momClipart.JPG")
+        layout.image = UIImage(named: "momClipart.png")
         
         let message = MSMessage()
         message.layout = layout
         
         activeConversation?.insert(message, completionHandler: nil)
     }
+    @IBAction func loadMessageButton(_ sender: Any) {
+        activeConversation?.insert(seguedMessage, completionHandler: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+          
     }
     
     // MARK: - Conversation Handling
