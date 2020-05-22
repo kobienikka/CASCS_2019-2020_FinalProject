@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B9F7871246C5BF600A2F24E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F7870246C5BF500A2F24E /* MenuViewController.swift */; };
 		8BD3E24924723F84005468F9 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3E24824723F84005468F9 /* food.jpg */; };
 		8BD3E24B24723F8C005468F9 /* laundry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3E24A24723F8C005468F9 /* laundry.jpg */; };
 		8BD3E24D24723F92005468F9 /* momClipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3E24C24723F92005468F9 /* momClipart.png */; };
@@ -49,7 +48,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8B9F7870246C5BF500A2F24E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "/Users/kobie/Desktop/CASCS_2019-2020_FinalProject/MothersDayApp/iMessage Ext/MenuViewController.swift"; sourceTree = "<absolute>"; };
 		8BD3E24824723F84005468F9 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
 		8BD3E24A24723F8C005468F9 /* laundry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laundry.jpg; sourceTree = "<group>"; };
 		8BD3E24C24723F92005468F9 /* momClipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = momClipart.png; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				8BD777012465BC040089F4E3 /* MessagesViewController.swift */,
-				8B9F7870246C5BF500A2F24E /* MenuViewController.swift */,
 				8BD3E24824723F84005468F9 /* food.jpg */,
 				8BD3E24A24723F8C005468F9 /* laundry.jpg */,
 				8BD3E24C24723F92005468F9 /* momClipart.png */,
@@ -261,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD777022465BC040089F4E3 /* MessagesViewController.swift in Sources */,
-				8B9F7871246C5BF600A2F24E /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

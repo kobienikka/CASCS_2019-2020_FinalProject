@@ -10,26 +10,30 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
-    
-    @IBOutlet weak var label: UILabel!
-    var seguedMessage = MSMessage()
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var stepperOutlet: UIStepper!
+    @IBOutlet weak var confirmOrderOutlet: UIButton!
+    @IBOutlet weak var pancakesButtonOutlet: UIButton!
+    @IBOutlet weak var sandwichButtonOutlet: UIButton!
+    @IBOutlet weak var fruitButtonOutlet: UIButton!
+    @IBOutlet weak var waterButtonOutlet: UIButton!
+    @IBOutlet weak var foodButtonOutlet: UIButton!
+    @IBOutlet weak var laundryButtonOutlet: UIButton!
+    @IBOutlet weak var presenceButtonOutlet: UIButton!
+    var quantity: Double = 0
+    var food: String = ""
+   
     @IBAction func foodButton(_ sender: Any) {
-        label.text = "Food successfully requested"
-        
-        //appearance of message
-        let layout = MSMessageTemplateLayout()
-        layout.caption = "I need FOOOOD! please:)"
-        layout.image = UIImage(named: "food.jpg")
-        
-        let message = MSMessage()
-        message.layout = layout
-        
-        activeConversation?.insert(message, completionHandler: nil)
+        pancakesButtonOutlet.isHidden = false
+        sandwichButtonOutlet.isHidden = false
+        fruitButtonOutlet.isHidden = false
+        waterButtonOutlet.isHidden = false
+        foodButtonOutlet.isHidden = true
+        laundryButtonOutlet.isHidden = true
+        presenceButtonOutlet.isHidden = true
     }
     
     @IBAction func laundryButton(_ sender: Any) {
-        label.text = "Laundry successfully requested"
-        
         //appearance of message
         let layout = MSMessageTemplateLayout()
         layout.caption = "My hamper is looking like Mt. Everest! please help!!:)"
@@ -42,8 +46,6 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     @IBAction func presenceButton(_ sender: Any) {
-        label.text = "mom successfully requested"
-        
         //appearance of message
         let layout = MSMessageTemplateLayout()
         layout.caption = "Your presence has been requested:)"
@@ -54,14 +56,55 @@ class MessagesViewController: MSMessagesAppViewController {
         
         activeConversation?.insert(message, completionHandler: nil)
     }
-    @IBAction func loadMessageButton(_ sender: Any) {
-        print(seguedMessage)
-        activeConversation?.insert(seguedMessage, completionHandler: nil)
+    
+    @IBAction func stepper(_ sender: UIStepper) {
+        quantityLabel.text = "Quantity: \(sender.value)"
+        confirmOrderOutlet.isHidden = false
+        quantity = sender.value
+    }
+    
+    @IBAction func confirmOrderButton(_ sender: Any) {
+           //appearance of message
+           let layout = MSMessageTemplateLayout()
+           layout.caption = "Can I please have \(quantity) \(food)"
+           layout.image = UIImage(named: "food.jpg")
+        
+        let message = MSMessage()
+        message.layout = layout
+        
+        activeConversation?.insert(message, completionHandler: nil)
+       }
+    
+    @IBAction func pancakesButton(_ sender: Any) {
+        quantityLabel.isHidden = false
+        stepperOutlet.isHidden = false
+        food = "pancakes"
+    }
+    
+    @IBAction func sandwichButton(_ sender: Any) {
+        quantityLabel.isHidden = false
+        stepperOutlet.isHidden = false
+        food = "sandwhich"
+    }
+    
+    @IBAction func fruitsButton(_ sender: Any) {
+        quantityLabel.isHidden = false
+        stepperOutlet.isHidden = false
+        food = "fruits"
+    }
+    
+    @IBAction func waterButton(_ sender: Any) {
+//        quantityLabel.isHidden = false
+//        stepperOutlet.isHidden = false
+        quantity = 1
+        food = "water"
+        confirmOrderOutlet.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        quantityLabel.text = "Quantity: \(quantity)"
     }
     
     // MARK: - Conversation Handling

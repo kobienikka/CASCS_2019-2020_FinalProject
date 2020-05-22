@@ -15,64 +15,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-L1-FPJ">
-                                <rect key="frame" x="153" y="205" width="14" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
                                 <rect key="frame" x="112.5" y="255.5" width="95" height="30"/>
                                 <state key="normal" title="Request Food"/>
                                 <connections>
                                     <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="hQK-RX-Zer"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-jj-8fb">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-jj-8fb">
                                 <rect key="frame" x="98" y="375.5" width="124" height="30"/>
                                 <state key="normal" title="Request presence"/>
                                 <connections>
-                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="9dW-Pd-FaQ"/>
                                     <action selector="presenceButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="ADp-3U-JxC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
                                 <rect key="frame" x="104" y="315.5" width="112" height="30"/>
                                 <state key="normal" title="Request laundry"/>
                                 <connections>
-                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Zka-ir-inZ"/>
                                     <action selector="laundryButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="m3l-6s-4O8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW1-UJ-faR">
-                                <rect key="frame" x="125" y="435.5" width="70" height="30"/>
-                                <state key="normal" title="segueTest"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m40-gw-cwu">
+                                <rect key="frame" x="61" y="10" width="198" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Pancakes"/>
                                 <connections>
-                                    <segue destination="2Xr-Bb-lQl" kind="show" id="r33-P7-Opl"/>
+                                    <action selector="pancakesButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="egL-py-mea"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIX-er-ek2">
-                                <rect key="frame" x="194" y="144" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Load message"/>
+                            <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-6k-9HP">
+                                <rect key="frame" x="113" y="396" width="94" height="32"/>
                                 <connections>
-                                    <action selector="loadMessageButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="9Ei-Vn-IsO"/>
+                                    <action selector="stepper:" destination="ObA-dk-sSI" eventType="valueChanged" id="5EG-bK-YH2"/>
+                                </connections>
+                            </stepper>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avH-Pd-917">
+                                <rect key="frame" x="85.5" y="446" width="149" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Confirm order"/>
+                                <connections>
+                                    <action selector="confirmOrderButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="dfv-l0-5h7"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quantity: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-Bh-5cL">
+                                <rect key="frame" x="102.5" y="341" width="115.5" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-9A-Xs3">
+                                <rect key="frame" x="59.5" y="62" width="201" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Sandwich"/>
+                                <connections>
+                                    <action selector="sandwichButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="awo-57-Lge"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auw-ga-8KL">
+                                <rect key="frame" x="82" y="114" width="156" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Fruits"/>
+                                <connections>
+                                    <action selector="fruitsButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="IPN-Ij-LXH"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZn-tx-fZE">
+                                <rect key="frame" x="82.5" y="166" width="155" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request water"/>
+                                <connections>
+                                    <action selector="waterButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="4ei-mi-ZDI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pRf-L1-FPJ" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="161" id="Goh-rG-khr"/>
-                            <constraint firstItem="lut-FP-3re" firstAttribute="top" secondItem="pRf-L1-FPJ" secondAttribute="bottom" constant="30" id="Pyh-dF-3Tn"/>
+                            <constraint firstItem="avH-Pd-917" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="3k5-hJ-xqd"/>
+                            <constraint firstItem="cNg-9A-Xs3" firstAttribute="top" secondItem="m40-gw-cwu" secondAttribute="bottom" constant="10" id="7Mq-vp-BRA"/>
+                            <constraint firstItem="auw-ga-8KL" firstAttribute="top" secondItem="cNg-9A-Xs3" secondAttribute="bottom" constant="10" id="Cg8-dL-PDG"/>
+                            <constraint firstItem="StW-b6-5MJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="Fg0-LK-h6R"/>
+                            <constraint firstItem="m40-gw-cwu" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="10" id="Ikb-Dz-FHO"/>
+                            <constraint firstItem="avH-Pd-917" firstAttribute="top" secondItem="2eY-6k-9HP" secondAttribute="bottom" constant="18" id="MTK-dy-yEm"/>
                             <constraint firstItem="HJh-jj-8fb" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="R4u-9R-s4z"/>
-                            <constraint firstItem="PW1-UJ-faR" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="W0F-7U-gEn"/>
-                            <constraint firstItem="PW1-UJ-faR" firstAttribute="top" secondItem="HJh-jj-8fb" secondAttribute="bottom" constant="30" id="YNU-uM-DtT"/>
-                            <constraint firstItem="pRf-L1-FPJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="maL-B7-p8q"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="PW1-UJ-faR" secondAttribute="bottom" constant="62.5" id="pUc-Qs-tfp"/>
+                            <constraint firstItem="m40-gw-cwu" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="VUC-6u-xKn"/>
+                            <constraint firstItem="auw-ga-8KL" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="apg-bw-7sZ"/>
+                            <constraint firstItem="2eY-6k-9HP" firstAttribute="top" secondItem="FXv-Bh-5cL" secondAttribute="bottom" constant="8" id="cT1-d9-aO9"/>
+                            <constraint firstItem="2eY-6k-9HP" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="cav-Wd-Mp0"/>
+                            <constraint firstItem="cNg-9A-Xs3" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="gwc-o2-DXW"/>
+                            <constraint firstItem="FXv-Bh-5cL" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="iRr-vx-qIg"/>
+                            <constraint firstItem="LZn-tx-fZE" firstAttribute="top" secondItem="auw-ga-8KL" secondAttribute="bottom" constant="10" id="ifm-dg-EWQ"/>
+                            <constraint firstItem="LZn-tx-fZE" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="pIb-K0-rD5"/>
                             <constraint firstItem="lut-FP-3re" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="pte-ol-jNm"/>
                             <constraint firstItem="StW-b6-5MJ" firstAttribute="top" secondItem="lut-FP-3re" secondAttribute="bottom" constant="30" id="rwR-FZ-1kH"/>
+                            <constraint firstItem="FXv-Bh-5cL" firstAttribute="top" secondItem="lut-FP-3re" secondAttribute="bottom" constant="55.5" id="vcU-Ae-Ltu"/>
                             <constraint firstItem="HJh-jj-8fb" firstAttribute="top" secondItem="StW-b6-5MJ" secondAttribute="bottom" constant="30" id="xGl-1b-WnY"/>
-                            <constraint firstItem="StW-b6-5MJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="yeB-Pb-Uc5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
                     </view>
@@ -80,80 +117,21 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
-                        <outlet property="label" destination="pRf-L1-FPJ" id="hKJ-hL-UEz"/>
+                        <outlet property="confirmOrderOutlet" destination="avH-Pd-917" id="Q7V-XM-we4"/>
+                        <outlet property="foodButtonOutlet" destination="lut-FP-3re" id="QfS-HA-8YP"/>
+                        <outlet property="fruitButtonOutlet" destination="auw-ga-8KL" id="6le-2r-GvU"/>
+                        <outlet property="laundryButtonOutlet" destination="StW-b6-5MJ" id="nS0-QI-4L1"/>
+                        <outlet property="pancakesButtonOutlet" destination="m40-gw-cwu" id="13I-kZ-fyE"/>
+                        <outlet property="presenceButtonOutlet" destination="HJh-jj-8fb" id="EQ3-nz-XQF"/>
+                        <outlet property="quantityLabel" destination="FXv-Bh-5cL" id="df1-cw-5Ns"/>
+                        <outlet property="sandwichButtonOutlet" destination="cNg-9A-Xs3" id="LoJ-k6-pYF"/>
+                        <outlet property="stepperOutlet" destination="2eY-6k-9HP" id="OpI-E0-RZc"/>
+                        <outlet property="waterButtonOutlet" destination="LZn-tx-fZE" id="TJn-9I-zTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-217.39130434782609" y="123.88392857142857"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="0BB-XF-Wtp">
-            <objects>
-                <viewController id="2Xr-Bb-lQl" customClass="MenuViewController" customModule="iMessage_Ext" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CcP-ct-Fh2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v6-gG-z1b">
-                                <rect key="frame" x="108" y="68" width="198" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Request Pancakes"/>
-                                <connections>
-                                    <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="usw-Vx-ggu"/>
-                                </connections>
-                            </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PvB-1Q-W8K">
-                                <rect key="frame" x="160" y="242" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="stepper:" destination="2Xr-Bb-lQl" eventType="valueChanged" id="A6M-AB-6Le"/>
-                                </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9V-58-hfM">
-                                <rect key="frame" x="108" y="305" width="198" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Confirm order"/>
-                                <connections>
-                                    <action selector="confirmOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="LBd-d7-fMI"/>
-                                    <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="Aq1-ct-Vjw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rX-CT-vjR">
-                                <rect key="frame" x="108" y="368" width="198" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Place order"/>
-                                <connections>
-                                    <action selector="confirmOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="OFv-fz-dt3"/>
-                                    <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="g7U-o1-vZT"/>
-                                    <action selector="placeOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="Mr6-mg-EFt"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lf-T2-b5M">
-                                <rect key="frame" x="101" y="168" width="212" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Wf-yA-az8"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lOt-4p-obB"/>
-                    <connections>
-                        <outlet property="confirmOrderOutlet" destination="S9V-58-hfM" id="DUX-Fw-9ua"/>
-                        <outlet property="placeOrderOutlet" destination="4rX-CT-vjR" id="YaB-T4-ZA0"/>
-                        <outlet property="quantityLabel" destination="4Lf-T2-b5M" id="KgQ-A0-Iya"/>
-                        <outlet property="stepperOutlet" destination="PvB-1Q-W8K" id="WZf-Iu-gnt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f97-E0-NgF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="613.04347826086962" y="95.758928571428569"/>
         </scene>
     </scenes>
 </document>
