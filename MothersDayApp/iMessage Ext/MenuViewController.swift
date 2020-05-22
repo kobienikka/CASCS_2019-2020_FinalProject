@@ -14,7 +14,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var stepperOutlet: UIStepper!
     @IBOutlet weak var confirmOrderOutlet: UIButton!
     @IBOutlet weak var placeOrderOutlet: UIButton!
-    var quantity: Int = 0
+    var quantity: Double = 0
     var food: String = ""
     var finalOrder = MSMessage()
     
@@ -22,13 +22,15 @@ class MenuViewController: UIViewController {
     @IBAction func stepper(_ sender: UIStepper) {
         quantityLabel.text = "Quantity: \(sender.value)"
         confirmOrderOutlet.isHidden = false
+        quantity = sender.value
     }
     @IBAction func confirmOrderButton(_ sender: Any) {
         placeOrderOutlet.isHidden = false
         //appearance of message
+        //var theCaption = "Can I please have \(quantity) \(food)"
         let layout = MSMessageTemplateLayout()
         layout.caption = "Can I please have \(quantity) \(food)"
-        layout.image = UIImage(named: "food.jpg")
+        //layout.image = UIImage(named: "food.jpg")
 
         finalOrder.layout = layout
     }
@@ -60,6 +62,7 @@ class MenuViewController: UIViewController {
         let vc = segue.destination as! MessagesViewController
         // Pass the selected object to the new view controller.
         vc.seguedMessage = finalOrder
+        print(finalOrder)
     }
 
 }

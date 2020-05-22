@@ -55,13 +55,13 @@ class MessagesViewController: MSMessagesAppViewController {
         activeConversation?.insert(message, completionHandler: nil)
     }
     @IBAction func loadMessageButton(_ sender: Any) {
+        print(seguedMessage)
         activeConversation?.insert(seguedMessage, completionHandler: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-          
     }
     
     // MARK: - Conversation Handling

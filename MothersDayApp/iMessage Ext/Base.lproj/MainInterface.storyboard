@@ -12,23 +12,23 @@
             <objects>
                 <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="iMessage_Ext" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-L1-FPJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-L1-FPJ">
                                 <rect key="frame" x="153" y="205" width="14" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
                                 <rect key="frame" x="112.5" y="255.5" width="95" height="30"/>
                                 <state key="normal" title="Request Food"/>
                                 <connections>
                                     <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="hQK-RX-Zer"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-jj-8fb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-jj-8fb">
                                 <rect key="frame" x="98" y="375.5" width="124" height="30"/>
                                 <state key="normal" title="Request presence"/>
                                 <connections>
@@ -36,7 +36,7 @@
                                     <action selector="presenceButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="ADp-3U-JxC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
                                 <rect key="frame" x="104" y="315.5" width="112" height="30"/>
                                 <state key="normal" title="Request laundry"/>
                                 <connections>
@@ -44,7 +44,7 @@
                                     <action selector="laundryButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="m3l-6s-4O8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW1-UJ-faR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW1-UJ-faR">
                                 <rect key="frame" x="125" y="435.5" width="70" height="30"/>
                                 <state key="normal" title="segueTest"/>
                                 <connections>
@@ -130,7 +130,6 @@
                                     <action selector="confirmOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="OFv-fz-dt3"/>
                                     <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="g7U-o1-vZT"/>
                                     <action selector="placeOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="Mr6-mg-EFt"/>
-                                    <segue destination="ObA-dk-sSI" kind="show" id="CKu-na-O2C"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lf-T2-b5M">
