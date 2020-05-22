@@ -2,9 +2,9 @@
 
 This is a list of tasks I need to complete for this project.
 
-1. Get the food menuVC to pass the given MSMessage() through the segue into the MessagesVC
-2. finish food menu feature (gives list of food to request when you click food option)
-3. Add more features like the food menu for the other buttons
+1. get the other menu items to disapear after you select one item
+2. make a "back" button that unhides the buttons and allows you to reselect your food choice
+3. (big picture) add the same features from the food button to the laundry and presence buttons
 
 ##Completed
 1. research to see if XCode would be able to send text messages.
@@ -14,3 +14,8 @@ This is a list of tasks I need to complete for this project.
 5. Start adding features to the base imessage app
 6. Update xcode in order to fix issues with running app on phone
 7. fix images displaying in the message preview
+8. finish food menu feature (gives list of food to request when you click food option)
+9. Add more features like the food menu for the other buttons
+
+##trashed
+1. Get the food menuVC to pass the given MSMessage() through the segue into the MessagesVC
