@@ -20,6 +20,7 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var foodButtonOutlet: UIButton!
     @IBOutlet weak var laundryButtonOutlet: UIButton!
     @IBOutlet weak var presenceButtonOutlet: UIButton!
+    @IBOutlet weak var orderLabel: UILabel!
     var quantity: Double = 0
     var food: String = ""
    
@@ -76,35 +77,81 @@ class MessagesViewController: MSMessagesAppViewController {
        }
     
     @IBAction func pancakesButton(_ sender: Any) {
+        orderLabel.isHidden = false
         quantityLabel.isHidden = false
         stepperOutlet.isHidden = false
         food = "pancakes"
+        
+        orderLabel.text = "How many pancakes would you like?"
+        
+        // make buttons disapear
+        hideMenuChoices()
     }
     
     @IBAction func sandwichButton(_ sender: Any) {
+        orderLabel.text = "How many sandwiches would you like?"
+        orderLabel.isHidden = false
         quantityLabel.isHidden = false
         stepperOutlet.isHidden = false
         food = "sandwhich"
+        
+        // make buttons disapear
+        hideMenuChoices()
     }
     
     @IBAction func fruitsButton(_ sender: Any) {
+        orderLabel.text = "How many sandwiches would you like?"
+        orderLabel.isHidden = false
         quantityLabel.isHidden = false
         stepperOutlet.isHidden = false
         food = "fruits"
+        
+        // make buttons disapear
+        hideMenuChoices()
     }
     
     @IBAction func waterButton(_ sender: Any) {
 //        quantityLabel.isHidden = false
 //        stepperOutlet.isHidden = false
+        orderLabel.text = "Would you like one glass of water?"
         quantity = 1
         food = "water"
+        orderLabel.isHidden = false
         confirmOrderOutlet.isHidden = false
+        
+        // make buttons disapear
+        hideMenuChoices()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         quantityLabel.text = "Quantity: \(quantity)"
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        if orderLabel.isHidden == false {
+            unHideMenuChoices()
+            quantityLabel.isHidden = true
+            stepperOutlet.isHidden = true
+            orderLabel.isHidden = true
+            confirmOrderOutlet.isHidden = true
+        }
+    }
+    
+    //Hide and unHide funcs
+    func hideMenuChoices() {
+        pancakesButtonOutlet.isHidden = true
+        sandwichButtonOutlet.isHidden = true
+        fruitButtonOutlet.isHidden = true
+        waterButtonOutlet.isHidden = true
+    }
+    
+    func unHideMenuChoices() {
+        pancakesButtonOutlet.isHidden = false
+        sandwichButtonOutlet.isHidden = false
+        fruitButtonOutlet.isHidden = false
+        waterButtonOutlet.isHidden = false
     }
     
     // MARK: - Conversation Handling
