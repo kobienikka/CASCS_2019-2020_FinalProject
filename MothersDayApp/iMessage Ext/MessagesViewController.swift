@@ -18,8 +18,7 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var fruitButtonOutlet: UIButton!
     @IBOutlet weak var waterButtonOutlet: UIButton!
     @IBOutlet weak var foodButtonOutlet: UIButton!
-    @IBOutlet weak var laundryButtonOutlet: UIButton!
-    @IBOutlet weak var presenceButtonOutlet: UIButton!
+    @IBOutlet weak var foodTutorialsOutlet: UIButton!
     @IBOutlet weak var orderLabel: UILabel!
     var quantity: Double = 0
     var food: String = ""
@@ -30,32 +29,11 @@ class MessagesViewController: MSMessagesAppViewController {
         fruitButtonOutlet.isHidden = false
         waterButtonOutlet.isHidden = false
         foodButtonOutlet.isHidden = true
-        laundryButtonOutlet.isHidden = true
-        presenceButtonOutlet.isHidden = true
+        foodTutorialsOutlet.isHidden = true
     }
     
-    @IBAction func laundryButton(_ sender: Any) {
-        //appearance of message
-        let layout = MSMessageTemplateLayout()
-        layout.caption = "My hamper is looking like Mt. Everest! please help!!:)"
-        layout.image = UIImage(named: "laundry.jpg")
+    @IBAction func foodTutorials(_ sender: Any) {
         
-        let message = MSMessage()
-        message.layout = layout
-        
-        activeConversation?.insert(message, completionHandler: nil)
-    }
-    
-    @IBAction func presenceButton(_ sender: Any) {
-        //appearance of message
-        let layout = MSMessageTemplateLayout()
-        layout.caption = "Your presence has been requested:)"
-        layout.image = UIImage(named: "momClipart.png")
-        
-        let message = MSMessage()
-        message.layout = layout
-        
-        activeConversation?.insert(message, completionHandler: nil)
     }
     
     @IBAction func stepper(_ sender: UIStepper) {
@@ -139,7 +117,7 @@ class MessagesViewController: MSMessagesAppViewController {
         } else if pancakesButtonOutlet.isHidden == false {
             hideMenuChoices()
             unHidePrimaryButtons()
-            
+            waterButtonOutlet.isHidden = true
         }
     }
     
@@ -161,15 +139,13 @@ class MessagesViewController: MSMessagesAppViewController {
     func unHidePrimaryButtons() {
         waterButtonOutlet.isHidden = false
         foodButtonOutlet.isHidden = false
-        laundryButtonOutlet.isHidden = false
-        presenceButtonOutlet.isHidden = false
+        foodTutorialsOutlet.isHidden = false
     }
     
     func hidePrimaryButtons() {
         waterButtonOutlet.isHidden = true
         foodButtonOutlet.isHidden = true
-        laundryButtonOutlet.isHidden = true
-        presenceButtonOutlet.isHidden = true
+        foodTutorialsOutlet.isHidden = true
        }
     
     // MARK: - Conversation Handling

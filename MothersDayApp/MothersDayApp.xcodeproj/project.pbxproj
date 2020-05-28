@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B171136247F84EF00C78726 /* FoodTutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B171135247F84EF00C78726 /* FoodTutorialsViewController.swift */; };
+		8B171138247F87E500C78726 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B171137247F87E500C78726 /* NSAttributedStringExtension.swift */; };
 		8BD3E24924723F84005468F9 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3E24824723F84005468F9 /* food.jpg */; };
 		8BD3E24B24723F8C005468F9 /* laundry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3E24A24723F8C005468F9 /* laundry.jpg */; };
 		8BD3E24D24723F92005468F9 /* momClipart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BD3E24C24723F92005468F9 /* momClipart.png */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8B171135247F84EF00C78726 /* FoodTutorialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTutorialsViewController.swift; sourceTree = "<group>"; };
+		8B171137247F87E500C78726 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		8BD3E24824723F84005468F9 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
 		8BD3E24A24723F8C005468F9 /* laundry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laundry.jpg; sourceTree = "<group>"; };
 		8BD3E24C24723F92005468F9 /* momClipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = momClipart.png; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				8BD3E24A24723F8C005468F9 /* laundry.jpg */,
 				8BD3E24C24723F92005468F9 /* momClipart.png */,
 				8BD777032465BC040089F4E3 /* MainInterface.storyboard */,
+				8B171135247F84EF00C78726 /* FoodTutorialsViewController.swift */,
+				8B171137247F87E500C78726 /* NSAttributedStringExtension.swift */,
 				8BD777062465BC0A0089F4E3 /* Assets.xcassets */,
 				8BD777082465BC0A0089F4E3 /* Info.plist */,
 			);
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B171138247F87E500C78726 /* NSAttributedStringExtension.swift in Sources */,
+				8B171136247F84EF00C78726 /* FoodTutorialsViewController.swift in Sources */,
 				8BD777022465BC040089F4E3 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
