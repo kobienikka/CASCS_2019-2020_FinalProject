@@ -25,18 +25,33 @@ class FoodTutorialsViewController: UIViewController {
         let path = "https://www.youtube.com/watch?v=cxFi4rO11uk"
         let text = breakfastTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click here for breakfast recipe videos")
+        let font = breakfastTextView.font
+        let textColor = breakfastTextView.textColor
+        breakfastTextView.attributedText = attributedString
+        breakfastTextView.font = font
+        breakfastTextView.textColor = textColor
     }
     
     func updateLunchTextView() {
         let path = "https://www.youtube.com/watch?v=9_5wHw6l11o"
         let text = breakfastTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click here for lunch recipe videos")
+        let font = lunchTextView.font
+        let textColor = lunchTextView.textColor
+        lunchTextView.attributedText = attributedString
+        lunchTextView.font = font
+        lunchTextView.textColor = textColor
     }
     
     func  updateDinnerTextView() {
         let path = "https://www.youtube.com/watch?v=XBJKi2tcKkE"
         let text = breakfastTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click here for dinner recipe videos")
+        let font = dinnerTextView.font
+        let textColor = dinnerTextView.textColor
+        dinnerTextView.attributedText = attributedString
+        dinnerTextView.font = font
+        dinnerTextView.textColor = textColor
     }
 
     /*

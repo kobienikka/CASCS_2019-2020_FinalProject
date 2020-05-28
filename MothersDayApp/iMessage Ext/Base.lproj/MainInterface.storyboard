@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Md7-qx-Jxr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uv4-zB-qsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Rcb-2t-WFN" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nww-IO-jHA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -20,6 +19,7 @@
                         <segue destination="ObA-dk-sSI" kind="relationship" relationship="rootViewController" id="OGp-GM-RkF"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uv4-zB-qsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-980" y="41"/>
         </scene>
@@ -170,8 +170,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" text="Click here for breakfast recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nrr-wy-4aO">
-                                <rect key="frame" x="35" y="236" width="344" height="90"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for breakfast recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nrr-wy-4aO">
+                                <rect key="frame" x="12" y="280.5" width="390" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -186,8 +186,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" text="Click here for dinner recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Qs-u5n">
-                                <rect key="frame" x="35" y="571" width="344" height="85"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for dinner recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Qs-u5n">
+                                <rect key="frame" x="27.5" y="570.5" width="359" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -197,10 +197,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ydH-Qs-u5n" firstAttribute="top" secondItem="9Du-0e-rKm" secondAttribute="bottom" constant="100" id="Mek-hD-K5L"/>
-                            <constraint firstItem="9Du-0e-rKm" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="Q8m-a6-plY"/>
-                            <constraint firstItem="9Du-0e-rKm" firstAttribute="top" secondItem="Nrr-wy-4aO" secondAttribute="bottom" constant="100" id="ZJO-rS-woQ"/>
-                            <constraint firstItem="9Du-0e-rKm" firstAttribute="centerY" secondItem="hgS-s1-qDR" secondAttribute="centerY" id="qMD-Kv-2Hg"/>
+                            <constraint firstItem="9Du-0e-rKm" firstAttribute="top" secondItem="Nrr-wy-4aO" secondAttribute="bottom" constant="100" id="2i3-9G-dNB"/>
+                            <constraint firstItem="ydH-Qs-u5n" firstAttribute="top" secondItem="9Du-0e-rKm" secondAttribute="bottom" constant="100" id="4KR-MX-osr"/>
+                            <constraint firstItem="ydH-Qs-u5n" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="LBS-dK-9TW"/>
+                            <constraint firstItem="Nrr-wy-4aO" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="Xo9-p0-exp"/>
+                            <constraint firstItem="9Du-0e-rKm" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="kgm-NH-7wY"/>
+                            <constraint firstItem="9Du-0e-rKm" firstAttribute="centerY" secondItem="hgS-s1-qDR" secondAttribute="centerY" id="n4f-uw-jeD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gue-mH-atA"/>
                     </view>
