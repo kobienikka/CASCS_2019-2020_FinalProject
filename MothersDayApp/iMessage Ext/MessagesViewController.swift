@@ -130,12 +130,16 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        if orderLabel.isHidden == false {
+        if orderLabel.isHidden == false && pancakesButtonOutlet.isHidden == true {
             unHideMenuChoices()
             quantityLabel.isHidden = true
             stepperOutlet.isHidden = true
             orderLabel.isHidden = true
             confirmOrderOutlet.isHidden = true
+        } else if pancakesButtonOutlet.isHidden == false {
+            hideMenuChoices()
+            unHidePrimaryButtons()
+            
         }
     }
     
@@ -153,6 +157,20 @@ class MessagesViewController: MSMessagesAppViewController {
         fruitButtonOutlet.isHidden = false
         waterButtonOutlet.isHidden = false
     }
+    
+    func unHidePrimaryButtons() {
+        waterButtonOutlet.isHidden = false
+        foodButtonOutlet.isHidden = false
+        laundryButtonOutlet.isHidden = false
+        presenceButtonOutlet.isHidden = false
+    }
+    
+    func hidePrimaryButtons() {
+        waterButtonOutlet.isHidden = true
+        foodButtonOutlet.isHidden = true
+        laundryButtonOutlet.isHidden = true
+        presenceButtonOutlet.isHidden = true
+       }
     
     // MARK: - Conversation Handling
     
