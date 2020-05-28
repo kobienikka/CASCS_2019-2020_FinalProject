@@ -2,17 +2,17 @@
 
 ## What was the original goal of your project?
 
-(Answer here in about a Tweet or less.)
+My orignal goal was to create an app with different buttons that had predetermined messages and on click would paste that messages into the text box on imessage, so all the user would have to do is click send.
 
 ## How have the goals of your project changed?
 
-(Answer here. This should probably be about two to four sentences.)
+Originally I was planning on having 3 buttons that all had their own predetermined message. But, since then my objectives have changed and at this point in my project I have one button which leads to a text and one that leads to a tutorial page for cooking. (add more about end goal)
 
 ## What is a significant thing that you learned while building this project?
 
 (Answer here as if you were explaining this topic to a classmate who has never seen it before. This should probably be about three to five sentences.)
 
-*Example (delete me):* To build this project I had to learn how to use the UIPickerView, a UI element that lets the user scroll through items in a list and select one at a time. This required learning how to use delegates, which is when one class instance is used to dictate the behavior of a different class instance. I also had to figure out how to respond when an item is selected, and how to determine the currently selected item at any other point in time.
+Before building this project I had to learn how to use the Imessage extension on Xcode. The Imessage extension allows an app to be displayed in imessage(much like how gamePigeon is). (NOT DONE FINISH THIS)
 
 ## Describe an unexpected challenge that came up during this project, and how you overcame it.
 
