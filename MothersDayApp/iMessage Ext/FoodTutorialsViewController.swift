@@ -19,10 +19,14 @@ class FoodTutorialsViewController: UIViewController {
         updateBreakfastTextView()
         updateLunchTextView()
         updateDinnerTextView()
+        
+        breakfastTextView.layer.cornerRadius = 15
+        lunchTextView.layer.cornerRadius = 15
+        dinnerTextView.layer.cornerRadius = 15
     }
     
     func updateBreakfastTextView() {
-        let path = "https://www.youtube.com/watch?v=cxFi4rO11uk"
+        let path = "https://www.youtube.com/watch?v=t4t1Vj5-NLQ"
         let text = breakfastTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click here for breakfast recipe videos")
         let font = breakfastTextView.font
@@ -34,7 +38,7 @@ class FoodTutorialsViewController: UIViewController {
     
     func updateLunchTextView() {
         let path = "https://www.youtube.com/watch?v=9_5wHw6l11o"
-        let text = breakfastTextView.text ?? ""
+        let text = lunchTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click here for lunch recipe videos")
         let font = lunchTextView.font
         let textColor = lunchTextView.textColor
@@ -45,7 +49,7 @@ class FoodTutorialsViewController: UIViewController {
     
     func  updateDinnerTextView() {
         let path = "https://www.youtube.com/watch?v=XBJKi2tcKkE"
-        let text = breakfastTextView.text ?? ""
+        let text = dinnerTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click here for dinner recipe videos")
         let font = dinnerTextView.font
         let textColor = dinnerTextView.textColor

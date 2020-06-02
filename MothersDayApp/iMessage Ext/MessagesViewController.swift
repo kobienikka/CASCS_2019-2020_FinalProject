@@ -22,7 +22,23 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var orderLabel: UILabel!
     var quantity: Double = 0
     var food: String = ""
-   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        quantityLabel.text = "Quantity: \(quantity)"
+        pancakesButtonOutlet.layer.cornerRadius = 15
+        sandwichButtonOutlet.layer.cornerRadius = 15
+        fruitButtonOutlet.layer.cornerRadius = 15
+        waterButtonOutlet.layer.cornerRadius = 15
+        
+        foodButtonOutlet.layer.cornerRadius = 15
+        foodTutorialsOutlet.layer.cornerRadius = 15
+        
+        confirmOrderOutlet.layer.cornerRadius = 15
+        
+    }
+    
     @IBAction func foodButton(_ sender: Any) {
         pancakesButtonOutlet.isHidden = false
         sandwichButtonOutlet.isHidden = false
@@ -44,9 +60,9 @@ class MessagesViewController: MSMessagesAppViewController {
     
     @IBAction func confirmOrderButton(_ sender: Any) {
            //appearance of message
-           let layout = MSMessageTemplateLayout()
-           layout.caption = "Can I please have \(quantity) \(food)"
-           layout.image = UIImage(named: "food.jpg")
+        let layout = MSMessageTemplateLayout()
+        layout.caption = "Can I please have \(quantity) \(food)"
+        layout.image = UIImage(named: "food.jpg")
         
         let message = MSMessage()
         message.layout = layout
@@ -101,11 +117,7 @@ class MessagesViewController: MSMessagesAppViewController {
         hideMenuChoices()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        quantityLabel.text = "Quantity: \(quantity)"
-    }
+
     
     @IBAction func backButton(_ sender: Any) {
         if orderLabel.isHidden == false && pancakesButtonOutlet.isHidden == true {
