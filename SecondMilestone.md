@@ -10,16 +10,12 @@ Originally I was planning on having 3 buttons that all had their own predetermin
 
 ## What is a significant thing that you learned while building this project?
 
-(Answer here as if you were explaining this topic to a classmate who has never seen it before. This should probably be about three to five sentences.)
-
-Before building this project I had to learn how to use the Imessage extension on Xcode. The Imessage extension allows an app to be displayed in imessage(much like how gamePigeon is). (NOT DONE FINISH THIS)
+The most significant thing I've learned how to do while building my app is how to use the Imessage extension on Xcode. The Imessage extension allows an app to be displayed in imessage(much like how gamePigeon is). More specifically I learned how to input text into the text bar in your Messages through the app. This allows for the app to display predetermined texts and all the user has to do is click send.
 
 ## Describe an unexpected challenge that came up during this project, and how you overcame it.
 
-(Answer here. This should probably be about two to four sentences.)
+A challenge I faced while making the app was that I initially tried to pass messages from another view controller into the main on in order to display the message in the text bar. This didn't work because for some reason once you enter another view controller the Imessage extension will no longer prompt a message like before. To get around this I had to make my whole app on one view controller, which was very challenging. 
 
 ## Knowing what you know now, if you were to rebuild this project completely from scratch, what would you do differently, and why?
 
-(Answer here. This should probably be about two to four sentences.)
-
-*Example (delete me):* I would store the Connect Four game state in a different way that would make it easier to determine which cells are adjacent to each other, and in which direction. I made the decision early on to have Column objects that didn't really know about each other; each Column didn't know whether it was the first, second, or third column or whatever, and didn't know whether any others were the first, second, third, etc. It would have been a lot easier and cleaner if I had a method on each Cell that I could use to get the Cell that is adjacent to it in any given direction, something like `Cell.getNeighbor(inDirection:) -> Cell?`.
+If I were to do the project again I would have created all my buttons programmatically instead of through the story board. When I initially started making the app I thought I could use multiple different view controllers, hence having the buttons on the story board wouldn't be an issue. But, as I progressed I realized that I would have to use one view controller, and having all my buttons on one view controller got very cluttered. Creating all my buttons programmatically would have made the story board much neater and would have prevented a lot of the problems I encountered. 
