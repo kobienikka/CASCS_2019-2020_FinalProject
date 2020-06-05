@@ -67,8 +67,12 @@ class MessagesViewController: MSMessagesAppViewController {
         let message = MSMessage()
         message.layout = layout
         
-        activeConversation?.insert(message, completionHandler: nil)
+        activeConversation?.insert(message, completionHandler: printError)
        }
+    
+    func printError(error: Error?) -> Void {
+        print(error!.localizedDescription)
+    }
     
     @IBAction func pancakesButton(_ sender: Any) {
         orderLabel.isHidden = false
