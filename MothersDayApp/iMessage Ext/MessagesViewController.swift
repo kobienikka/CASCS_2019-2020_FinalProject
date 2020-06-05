@@ -20,6 +20,7 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var foodButtonOutlet: UIButton!
     @IBOutlet weak var foodTutorialsOutlet: UIButton!
     @IBOutlet weak var orderLabel: UILabel!
+    @IBOutlet weak var backButtonOutlet: UIButton!
     var quantity: Double = 0
     var food: String = ""
     
@@ -37,6 +38,7 @@ class MessagesViewController: MSMessagesAppViewController {
         
         confirmOrderOutlet.layer.cornerRadius = 15
         
+        backButtonOutlet.isHidden = true
     }
     
     @IBAction func foodButton(_ sender: Any) {
@@ -46,6 +48,7 @@ class MessagesViewController: MSMessagesAppViewController {
         waterButtonOutlet.isHidden = false
         foodButtonOutlet.isHidden = true
         foodTutorialsOutlet.isHidden = true
+        backButtonOutlet.isHidden = false
     }
     
     @IBAction func foodTutorials(_ sender: Any) {
@@ -61,24 +64,32 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBAction func confirmOrderButton(_ sender: Any) {
            //appearance of message
         let layout = MSMessageTemplateLayout()
-        layout.caption = "Can I please have \(quantity) \(food)"
+        if quantity != 1 {
+            makePlural()
+            layout.caption = "Can I please have \(quantity) \(food)"
+        } else {
+            layout.caption = "Can I please have \(quantity) \(food)"
+        }
         layout.image = UIImage(named: "food.jpg")
         
         let message = MSMessage()
         message.layout = layout
         
-        activeConversation?.insert(message, completionHandler: printError)
+        activeConversation?.insert(message, completionHandler: nil)
+        
+        backButton(self)
+        backButton(self)
        }
     
-    func printError(error: Error?) -> Void {
-        print(error!.localizedDescription)
-    }
+//    func printError(error: Error?) -> Void {
+//        print(error!.localizedDescription)
+//    }
     
     @IBAction func pancakesButton(_ sender: Any) {
         orderLabel.isHidden = false
         quantityLabel.isHidden = false
         stepperOutlet.isHidden = false
-        food = "pancakes"
+        food = "pancake"
         
         orderLabel.text = "How many pancakes would you like?"
         
@@ -91,18 +102,18 @@ class MessagesViewController: MSMessagesAppViewController {
         orderLabel.isHidden = false
         quantityLabel.isHidden = false
         stepperOutlet.isHidden = false
-        food = "sandwhich"
+        food = "sandwich"
         
         // make buttons disapear
         hideMenuChoices()
     }
     
     @IBAction func fruitsButton(_ sender: Any) {
-        orderLabel.text = "How many sandwiches would you like?"
+        orderLabel.text = "How many fruits would you like?"
         orderLabel.isHidden = false
         quantityLabel.isHidden = false
         stepperOutlet.isHidden = false
-        food = "fruits"
+        food = "fruit"
         
         // make buttons disapear
         hideMenuChoices()
@@ -130,10 +141,16 @@ class MessagesViewController: MSMessagesAppViewController {
             stepperOutlet.isHidden = true
             orderLabel.isHidden = true
             confirmOrderOutlet.isHidden = true
+            
+            //reset the stepper
+            quantity = 0
+            stepperOutlet.value = 0
+            quantityLabel.text = "Quantity: \(stepperOutlet.value)"
         } else if pancakesButtonOutlet.isHidden == false {
             hideMenuChoices()
             unHidePrimaryButtons()
             waterButtonOutlet.isHidden = true
+            backButtonOutlet.isHidden = true
         }
     }
     
@@ -163,6 +180,20 @@ class MessagesViewController: MSMessagesAppViewController {
         foodButtonOutlet.isHidden = true
         foodTutorialsOutlet.isHidden = true
        }
+    
+    func backButtonActions() {
+        
+    }
+    
+    func makePlural() {
+        if food == "sandwich" {
+            food = "sandwiches"
+        } else if food == "fruit" {
+            food = "fruits"
+        } else if food == "pancake" {
+            food = "pancakes"
+        }
+    }
     
     // MARK: - Conversation Handling
     
