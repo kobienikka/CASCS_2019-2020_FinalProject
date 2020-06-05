@@ -10,58 +10,189 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var stepperOutlet: UIStepper!
+    @IBOutlet weak var confirmOrderOutlet: UIButton!
+    @IBOutlet weak var pancakesButtonOutlet: UIButton!
+    @IBOutlet weak var sandwichButtonOutlet: UIButton!
+    @IBOutlet weak var fruitButtonOutlet: UIButton!
+    @IBOutlet weak var waterButtonOutlet: UIButton!
+    @IBOutlet weak var foodButtonOutlet: UIButton!
+    @IBOutlet weak var foodTutorialsOutlet: UIButton!
+    @IBOutlet weak var orderLabel: UILabel!
+    @IBOutlet weak var backButtonOutlet: UIButton!
+    var quantity: Double = 0
+    var food: String = ""
     
-    @IBOutlet weak var label: UILabel!
-    var seguedMessage = MSMessage()
-    @IBAction func foodButton(_ sender: Any) {
-        label.text = "Food successfully requested"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        quantityLabel.text = "Quantity: \(quantity)"
+        pancakesButtonOutlet.layer.cornerRadius = 15
+        sandwichButtonOutlet.layer.cornerRadius = 15
+        fruitButtonOutlet.layer.cornerRadius = 15
+        waterButtonOutlet.layer.cornerRadius = 15
         
-        //appearance of message
+        foodButtonOutlet.layer.cornerRadius = 15
+        foodTutorialsOutlet.layer.cornerRadius = 15
+        
+        confirmOrderOutlet.layer.cornerRadius = 15
+        
+        backButtonOutlet.isHidden = true
+    }
+    
+    @IBAction func foodButton(_ sender: Any) {
+        pancakesButtonOutlet.isHidden = false
+        sandwichButtonOutlet.isHidden = false
+        fruitButtonOutlet.isHidden = false
+        waterButtonOutlet.isHidden = false
+        foodButtonOutlet.isHidden = true
+        foodTutorialsOutlet.isHidden = true
+        backButtonOutlet.isHidden = false
+    }
+    
+    @IBAction func foodTutorials(_ sender: Any) {
+        
+    }
+    
+    @IBAction func stepper(_ sender: UIStepper) {
+        quantityLabel.text = "Quantity: \(sender.value)"
+        confirmOrderOutlet.isHidden = false
+        quantity = sender.value
+    }
+    
+    @IBAction func confirmOrderButton(_ sender: Any) {
+           //appearance of message
         let layout = MSMessageTemplateLayout()
-        layout.caption = "I need FOOOOD! please:)"
+        if quantity != 1 {
+            makePlural()
+            layout.caption = "Can I please have \(quantity) \(food)"
+        } else {
+            layout.caption = "Can I please have \(quantity) \(food)"
+        }
         layout.image = UIImage(named: "food.jpg")
         
         let message = MSMessage()
         message.layout = layout
         
         activeConversation?.insert(message, completionHandler: nil)
+        
+        backButton(self)
+        backButton(self)
+       }
+    
+//    func printError(error: Error?) -> Void {
+//        print(error!.localizedDescription)
+//    }
+    
+    @IBAction func pancakesButton(_ sender: Any) {
+        orderLabel.isHidden = false
+        quantityLabel.isHidden = false
+        stepperOutlet.isHidden = false
+        food = "pancake"
+        
+        orderLabel.text = "How many pancakes would you like?"
+        
+        // make buttons disapear
+        hideMenuChoices()
     }
     
-    @IBAction func laundryButton(_ sender: Any) {
-        label.text = "Laundry successfully requested"
+    @IBAction func sandwichButton(_ sender: Any) {
+        orderLabel.text = "How many sandwiches would you like?"
+        orderLabel.isHidden = false
+        quantityLabel.isHidden = false
+        stepperOutlet.isHidden = false
+        food = "sandwich"
         
-        //appearance of message
-        let layout = MSMessageTemplateLayout()
-        layout.caption = "My hamper is looking like Mt. Everest! please help!!:)"
-        layout.image = UIImage(named: "laundry.jpg")
-        
-        let message = MSMessage()
-        message.layout = layout
-        
-        activeConversation?.insert(message, completionHandler: nil)
+        // make buttons disapear
+        hideMenuChoices()
     }
     
-    @IBAction func presenceButton(_ sender: Any) {
-        label.text = "mom successfully requested"
+    @IBAction func fruitsButton(_ sender: Any) {
+        orderLabel.text = "How many fruits would you like?"
+        orderLabel.isHidden = false
+        quantityLabel.isHidden = false
+        stepperOutlet.isHidden = false
+        food = "fruit"
         
-        //appearance of message
-        let layout = MSMessageTemplateLayout()
-        layout.caption = "Your presence has been requested:)"
-        layout.image = UIImage(named: "momClipart.png")
-        
-        let message = MSMessage()
-        message.layout = layout
-        
-        activeConversation?.insert(message, completionHandler: nil)
-    }
-    @IBAction func loadMessageButton(_ sender: Any) {
-        activeConversation?.insert(seguedMessage, completionHandler: nil)
+        // make buttons disapear
+        hideMenuChoices()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-          
+    @IBAction func waterButton(_ sender: Any) {
+//        quantityLabel.isHidden = false
+//        stepperOutlet.isHidden = false
+        orderLabel.text = "Would you like one glass of water?"
+        quantity = 1
+        food = "water"
+        orderLabel.isHidden = false
+        confirmOrderOutlet.isHidden = false
+        
+        // make buttons disapear
+        hideMenuChoices()
+    }
+    
+
+    
+    @IBAction func backButton(_ sender: Any) {
+        if orderLabel.isHidden == false && pancakesButtonOutlet.isHidden == true {
+            unHideMenuChoices()
+            quantityLabel.isHidden = true
+            stepperOutlet.isHidden = true
+            orderLabel.isHidden = true
+            confirmOrderOutlet.isHidden = true
+            
+            //reset the stepper
+            quantity = 0
+            stepperOutlet.value = 0
+            quantityLabel.text = "Quantity: \(stepperOutlet.value)"
+        } else if pancakesButtonOutlet.isHidden == false {
+            hideMenuChoices()
+            unHidePrimaryButtons()
+            waterButtonOutlet.isHidden = true
+            backButtonOutlet.isHidden = true
+        }
+    }
+    
+    //Hide and unHide funcs
+    func hideMenuChoices() {
+        pancakesButtonOutlet.isHidden = true
+        sandwichButtonOutlet.isHidden = true
+        fruitButtonOutlet.isHidden = true
+        waterButtonOutlet.isHidden = true
+    }
+    
+    func unHideMenuChoices() {
+        pancakesButtonOutlet.isHidden = false
+        sandwichButtonOutlet.isHidden = false
+        fruitButtonOutlet.isHidden = false
+        waterButtonOutlet.isHidden = false
+    }
+    
+    func unHidePrimaryButtons() {
+        waterButtonOutlet.isHidden = false
+        foodButtonOutlet.isHidden = false
+        foodTutorialsOutlet.isHidden = false
+    }
+    
+    func hidePrimaryButtons() {
+        waterButtonOutlet.isHidden = true
+        foodButtonOutlet.isHidden = true
+        foodTutorialsOutlet.isHidden = true
+       }
+    
+    func backButtonActions() {
+        
+    }
+    
+    func makePlural() {
+        if food == "sandwich" {
+            food = "sandwiches"
+        } else if food == "fruit" {
+            food = "fruits"
+        } else if food == "pancake" {
+            food = "pancakes"
+        }
     }
     
     // MARK: - Conversation Handling

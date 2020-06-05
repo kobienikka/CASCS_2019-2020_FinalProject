@@ -12,67 +12,129 @@
             <objects>
                 <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="iMessage_Ext" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-L1-FPJ">
-                                <rect key="frame" x="153" y="205" width="14" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
-                                <rect key="frame" x="112.5" y="255.5" width="95" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
+                                <rect key="frame" x="70.5" y="194" width="179" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Request Food"/>
                                 <connections>
                                     <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="hQK-RX-Zer"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-jj-8fb">
-                                <rect key="frame" x="98" y="375.5" width="124" height="30"/>
-                                <state key="normal" title="Request presence"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
+                                <rect key="frame" x="82" y="392" width="156" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="I'm cooking!"/>
                                 <connections>
-                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="9dW-Pd-FaQ"/>
-                                    <action selector="presenceButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="ADp-3U-JxC"/>
+                                    <action selector="foodTutorials:" destination="ObA-dk-sSI" eventType="touchUpInside" id="m3l-6s-4O8"/>
+                                    <segue destination="haA-bl-3nG" kind="show" id="uaq-Ly-qlT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
-                                <rect key="frame" x="104" y="315.5" width="112" height="30"/>
-                                <state key="normal" title="Request laundry"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m40-gw-cwu">
+                                <rect key="frame" x="59.5" y="109" width="201" height="42"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Pancakes"/>
                                 <connections>
-                                    <action selector="foodButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Zka-ir-inZ"/>
-                                    <action selector="laundryButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="m3l-6s-4O8"/>
+                                    <action selector="pancakesButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="egL-py-mea"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW1-UJ-faR">
-                                <rect key="frame" x="125" y="435.5" width="70" height="30"/>
-                                <state key="normal" title="segueTest"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-9A-Xs3">
+                                <rect key="frame" x="59.5" y="216" width="201" height="42"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Sandwich"/>
                                 <connections>
-                                    <segue destination="2Xr-Bb-lQl" kind="show" id="r33-P7-Opl"/>
+                                    <action selector="sandwichButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="awo-57-Lge"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIX-er-ek2">
-                                <rect key="frame" x="194" y="144" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Load message"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auw-ga-8KL">
+                                <rect key="frame" x="59.5" y="323" width="201" height="42"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Fruits"/>
                                 <connections>
-                                    <action selector="loadMessageButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="9Ei-Vn-IsO"/>
+                                    <action selector="fruitsButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="IPN-Ij-LXH"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZn-tx-fZE">
+                                <rect key="frame" x="59.5" y="430" width="201" height="42"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request water"/>
+                                <connections>
+                                    <action selector="waterButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="4ei-mi-ZDI"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avH-Pd-917">
+                                <rect key="frame" x="85.5" y="405" width="149" height="42"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Confirm order"/>
+                                <connections>
+                                    <action selector="confirmOrderButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="dfv-l0-5h7"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-Bh-5cL">
+                                <rect key="frame" x="102.5" y="194" width="115.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-6k-9HP">
+                                <rect key="frame" x="113" y="298" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepper:" destination="ObA-dk-sSI" eventType="valueChanged" id="5EG-bK-YH2"/>
+                                </connections>
+                            </stepper>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZG-Jx-Hv9">
+                                <rect key="frame" x="160" y="119" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-QP-2Vq">
+                                <rect key="frame" x="25" y="25" width="61" height="22"/>
+                                <state key="normal" title="Back" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="1vb-xB-IbI"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pRf-L1-FPJ" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="161" id="Goh-rG-khr"/>
-                            <constraint firstItem="lut-FP-3re" firstAttribute="top" secondItem="pRf-L1-FPJ" secondAttribute="bottom" constant="30" id="Pyh-dF-3Tn"/>
-                            <constraint firstItem="HJh-jj-8fb" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="R4u-9R-s4z"/>
-                            <constraint firstItem="PW1-UJ-faR" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="W0F-7U-gEn"/>
-                            <constraint firstItem="PW1-UJ-faR" firstAttribute="top" secondItem="HJh-jj-8fb" secondAttribute="bottom" constant="30" id="YNU-uM-DtT"/>
-                            <constraint firstItem="pRf-L1-FPJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="maL-B7-p8q"/>
-                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="PW1-UJ-faR" secondAttribute="bottom" constant="62.5" id="pUc-Qs-tfp"/>
-                            <constraint firstItem="lut-FP-3re" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="pte-ol-jNm"/>
-                            <constraint firstItem="StW-b6-5MJ" firstAttribute="top" secondItem="lut-FP-3re" secondAttribute="bottom" constant="30" id="rwR-FZ-1kH"/>
-                            <constraint firstItem="HJh-jj-8fb" firstAttribute="top" secondItem="StW-b6-5MJ" secondAttribute="bottom" constant="30" id="xGl-1b-WnY"/>
-                            <constraint firstItem="StW-b6-5MJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="yeB-Pb-Uc5"/>
+                            <constraint firstItem="m40-gw-cwu" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="65" id="2t4-di-ntv"/>
+                            <constraint firstItem="FXv-Bh-5cL" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="3gV-QM-Ogr"/>
+                            <constraint firstItem="Pbg-QP-2Vq" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="25" id="3tp-Ti-mkC"/>
+                            <constraint firstItem="cNg-9A-Xs3" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="5wh-dc-seJ"/>
+                            <constraint firstItem="auw-ga-8KL" firstAttribute="top" secondItem="cNg-9A-Xs3" secondAttribute="bottom" constant="65" id="6qa-9J-OV1"/>
+                            <constraint firstItem="LZn-tx-fZE" firstAttribute="top" secondItem="auw-ga-8KL" secondAttribute="bottom" constant="65" id="7C1-uT-gKg"/>
+                            <constraint firstItem="m40-gw-cwu" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="7kc-j2-vEP"/>
+                            <constraint firstItem="LZn-tx-fZE" firstAttribute="width" secondItem="m40-gw-cwu" secondAttribute="width" id="8C8-8K-6OP"/>
+                            <constraint firstItem="avH-Pd-917" firstAttribute="top" secondItem="2eY-6k-9HP" secondAttribute="bottom" constant="75" id="8Zg-fX-sZT"/>
+                            <constraint firstItem="2eY-6k-9HP" firstAttribute="top" secondItem="FXv-Bh-5cL" secondAttribute="bottom" constant="75" id="BsW-og-NDg"/>
+                            <constraint firstItem="StW-b6-5MJ" firstAttribute="top" secondItem="lut-FP-3re" secondAttribute="bottom" constant="150" id="D35-9I-u8L"/>
+                            <constraint firstItem="lut-FP-3re" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="150" id="Ebf-dL-tO7"/>
+                            <constraint firstItem="LZn-tx-fZE" firstAttribute="height" secondItem="m40-gw-cwu" secondAttribute="height" id="G1O-Mm-v5h"/>
+                            <constraint firstItem="auw-ga-8KL" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="IOD-bT-YAM"/>
+                            <constraint firstItem="Pbg-QP-2Vq" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="25" id="KIw-sM-9nu"/>
+                            <constraint firstItem="avH-Pd-917" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="LkF-eN-uut"/>
+                            <constraint firstItem="cNg-9A-Xs3" firstAttribute="height" secondItem="m40-gw-cwu" secondAttribute="height" id="N8E-WF-Snf"/>
+                            <constraint firstItem="cNg-9A-Xs3" firstAttribute="width" secondItem="m40-gw-cwu" secondAttribute="width" id="PD0-7J-qCH"/>
+                            <constraint firstItem="LZn-tx-fZE" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="UOh-aB-f1Z"/>
+                            <constraint firstItem="FXv-Bh-5cL" firstAttribute="top" secondItem="6ZG-Jx-Hv9" secondAttribute="bottom" constant="75" id="Yto-VX-MdD" userLabel="Quantity Label.top = Order Label.bottom + 100"/>
+                            <constraint firstItem="2eY-6k-9HP" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="Znm-7a-ZXG"/>
+                            <constraint firstItem="StW-b6-5MJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="ahN-OK-a86"/>
+                            <constraint firstItem="cNg-9A-Xs3" firstAttribute="top" secondItem="m40-gw-cwu" secondAttribute="bottom" constant="65" id="bRT-rS-13t"/>
+                            <constraint firstItem="6ZG-Jx-Hv9" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="cuq-Of-HJV"/>
+                            <constraint firstItem="auw-ga-8KL" firstAttribute="height" secondItem="m40-gw-cwu" secondAttribute="height" id="osK-mG-vRb"/>
+                            <constraint firstItem="lut-FP-3re" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="rnt-x6-jXQ"/>
+                            <constraint firstItem="6ZG-Jx-Hv9" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="75" id="snP-3O-ci1"/>
+                            <constraint firstItem="auw-ga-8KL" firstAttribute="width" secondItem="m40-gw-cwu" secondAttribute="width" id="vjF-Gx-71f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
                     </view>
@@ -80,81 +142,80 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
-                        <outlet property="label" destination="pRf-L1-FPJ" id="hKJ-hL-UEz"/>
+                        <outlet property="backButtonOutlet" destination="Pbg-QP-2Vq" id="s6E-53-58a"/>
+                        <outlet property="confirmOrderOutlet" destination="avH-Pd-917" id="Q7V-XM-we4"/>
+                        <outlet property="foodButtonOutlet" destination="lut-FP-3re" id="QfS-HA-8YP"/>
+                        <outlet property="foodTutorialsOutlet" destination="StW-b6-5MJ" id="nS0-QI-4L1"/>
+                        <outlet property="fruitButtonOutlet" destination="auw-ga-8KL" id="6le-2r-GvU"/>
+                        <outlet property="orderLabel" destination="6ZG-Jx-Hv9" id="8i8-cw-GD0"/>
+                        <outlet property="pancakesButtonOutlet" destination="m40-gw-cwu" id="13I-kZ-fyE"/>
+                        <outlet property="quantityLabel" destination="FXv-Bh-5cL" id="df1-cw-5Ns"/>
+                        <outlet property="sandwichButtonOutlet" destination="cNg-9A-Xs3" id="LoJ-k6-pYF"/>
+                        <outlet property="stepperOutlet" destination="2eY-6k-9HP" id="OpI-E0-RZc"/>
+                        <outlet property="waterButtonOutlet" destination="LZn-tx-fZE" id="TJn-9I-zTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217.39130434782609" y="123.88392857142857"/>
+            <point key="canvasLocation" x="-207.24637681159422" y="85.714285714285708"/>
         </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="0BB-XF-Wtp">
+        <!--Food Tutorials View Controller-->
+        <scene sceneID="pOa-9Y-qhB">
             <objects>
-                <viewController id="2Xr-Bb-lQl" customClass="MenuViewController" customModule="iMessage_Ext" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CcP-ct-Fh2">
+                <viewController id="haA-bl-3nG" customClass="FoodTutorialsViewController" customModule="iMessage_Ext" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hgS-s1-qDR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v6-gG-z1b">
-                                <rect key="frame" x="108" y="68" width="198" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Request Pancakes"/>
-                                <connections>
-                                    <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="usw-Vx-ggu"/>
-                                </connections>
-                            </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PvB-1Q-W8K">
-                                <rect key="frame" x="160" y="242" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="stepper:" destination="2Xr-Bb-lQl" eventType="valueChanged" id="A6M-AB-6Le"/>
-                                </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9V-58-hfM">
-                                <rect key="frame" x="108" y="305" width="198" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Confirm order"/>
-                                <connections>
-                                    <action selector="confirmOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="LBd-d7-fMI"/>
-                                    <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="Aq1-ct-Vjw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rX-CT-vjR">
-                                <rect key="frame" x="108" y="368" width="198" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Place order"/>
-                                <connections>
-                                    <action selector="confirmOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="OFv-fz-dt3"/>
-                                    <action selector="pancakesButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="g7U-o1-vZT"/>
-                                    <action selector="placeOrderButton:" destination="2Xr-Bb-lQl" eventType="touchUpInside" id="Mr6-mg-EFt"/>
-                                    <segue destination="ObA-dk-sSI" kind="show" id="CKu-na-O2C"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lf-T2-b5M">
-                                <rect key="frame" x="101" y="168" width="212" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for breakfast recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nrr-wy-4aO">
+                                <rect key="frame" x="12" y="253.5" width="390" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for lunch recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Du-0e-rKm">
+                                <rect key="frame" x="32" y="398.5" width="350.5" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for dinner recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Qs-u5n">
+                                <rect key="frame" x="27.5" y="543.5" width="359" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Wf-yA-az8"/>
+                        <constraints>
+                            <constraint firstItem="9Du-0e-rKm" firstAttribute="top" secondItem="Nrr-wy-4aO" secondAttribute="bottom" constant="100" id="2i3-9G-dNB"/>
+                            <constraint firstItem="ydH-Qs-u5n" firstAttribute="top" secondItem="9Du-0e-rKm" secondAttribute="bottom" constant="100" id="4KR-MX-osr"/>
+                            <constraint firstItem="ydH-Qs-u5n" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="LBS-dK-9TW"/>
+                            <constraint firstItem="Nrr-wy-4aO" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="Xo9-p0-exp"/>
+                            <constraint firstItem="9Du-0e-rKm" firstAttribute="centerX" secondItem="hgS-s1-qDR" secondAttribute="centerX" id="kgm-NH-7wY"/>
+                            <constraint firstItem="9Du-0e-rKm" firstAttribute="centerY" secondItem="hgS-s1-qDR" secondAttribute="centerY" id="n4f-uw-jeD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gue-mH-atA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lOt-4p-obB"/>
+                    <navigationItem key="navigationItem" id="lbK-jM-vIS"/>
                     <connections>
-                        <outlet property="confirmOrderOutlet" destination="S9V-58-hfM" id="DUX-Fw-9ua"/>
-                        <outlet property="placeOrderOutlet" destination="4rX-CT-vjR" id="YaB-T4-ZA0"/>
-                        <outlet property="quantityLabel" destination="4Lf-T2-b5M" id="KgQ-A0-Iya"/>
-                        <outlet property="stepperOutlet" destination="PvB-1Q-W8K" id="WZf-Iu-gnt"/>
+                        <outlet property="breakfastTextView" destination="Nrr-wy-4aO" id="b0C-Uo-oOO"/>
+                        <outlet property="dinnerTextView" destination="ydH-Qs-u5n" id="LiN-SM-Scx"/>
+                        <outlet property="lunchTextView" destination="9Du-0e-rKm" id="rYX-aq-TgK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f97-E0-NgF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9B-he-prD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613.04347826086962" y="95.758928571428569"/>
+            <point key="canvasLocation" x="563.768115942029" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+    </resources>
 </document>
