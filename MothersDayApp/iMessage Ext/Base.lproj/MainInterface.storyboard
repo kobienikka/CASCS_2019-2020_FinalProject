@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rcb-2t-WFN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,22 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Md7-qx-Jxr">
-            <objects>
-                <navigationController id="Rcb-2t-WFN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nww-IO-jHA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ObA-dk-sSI" kind="relationship" relationship="rootViewController" id="OGp-GM-RkF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uv4-zB-qsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-980" y="41"/>
-        </scene>
         <!--Messages View Controller-->
         <scene sceneID="7MM-of-jgj">
             <objects>
@@ -32,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lut-FP-3re">
-                                <rect key="frame" x="70.5" y="238" width="179" height="48"/>
+                                <rect key="frame" x="70.5" y="194" width="179" height="48"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Request Food"/>
@@ -41,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StW-b6-5MJ">
-                                <rect key="frame" x="82" y="436" width="156" height="48"/>
+                                <rect key="frame" x="82" y="392" width="156" height="48"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="I'm cooking!"/>
@@ -51,7 +35,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m40-gw-cwu">
-                                <rect key="frame" x="59.5" y="153" width="201" height="42"/>
+                                <rect key="frame" x="59.5" y="109" width="201" height="42"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Request Pancakes"/>
@@ -60,7 +44,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-9A-Xs3">
-                                <rect key="frame" x="59.5" y="260" width="201" height="42"/>
+                                <rect key="frame" x="59.5" y="216" width="201" height="42"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Request Sandwich"/>
@@ -69,7 +53,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auw-ga-8KL">
-                                <rect key="frame" x="59.5" y="367" width="201" height="42"/>
+                                <rect key="frame" x="59.5" y="323" width="201" height="42"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Request Fruits"/>
@@ -78,7 +62,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZn-tx-fZE">
-                                <rect key="frame" x="59.5" y="474" width="201" height="42"/>
+                                <rect key="frame" x="59.5" y="430" width="201" height="42"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Request water"/>
@@ -87,7 +71,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avH-Pd-917">
-                                <rect key="frame" x="85.5" y="449" width="149" height="42"/>
+                                <rect key="frame" x="85.5" y="405" width="149" height="42"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Confirm order"/>
@@ -96,26 +80,25 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-Bh-5cL">
-                                <rect key="frame" x="102.5" y="238" width="115.5" height="29"/>
+                                <rect key="frame" x="102.5" y="194" width="115.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-6k-9HP">
-                                <rect key="frame" x="113" y="342" width="94" height="32"/>
+                                <rect key="frame" x="113" y="298" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepper:" destination="ObA-dk-sSI" eventType="valueChanged" id="5EG-bK-YH2"/>
                                 </connections>
                             </stepper>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZG-Jx-Hv9">
-                                <rect key="frame" x="160" y="163" width="0.0" height="0.0"/>
+                                <rect key="frame" x="160" y="119" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-QP-2Vq">
-                                <rect key="frame" x="7" y="101" width="66" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-QP-2Vq">
+                                <rect key="frame" x="25" y="25" width="61" height="22"/>
                                 <state key="normal" title="Back" image="arrowshape.turn.up.left.fill" catalog="system"/>
                                 <connections>
                                     <action selector="backButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="1vb-xB-IbI"/>
@@ -126,6 +109,7 @@
                         <constraints>
                             <constraint firstItem="m40-gw-cwu" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="65" id="2t4-di-ntv"/>
                             <constraint firstItem="FXv-Bh-5cL" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="3gV-QM-Ogr"/>
+                            <constraint firstItem="Pbg-QP-2Vq" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="25" id="3tp-Ti-mkC"/>
                             <constraint firstItem="cNg-9A-Xs3" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="5wh-dc-seJ"/>
                             <constraint firstItem="auw-ga-8KL" firstAttribute="top" secondItem="cNg-9A-Xs3" secondAttribute="bottom" constant="65" id="6qa-9J-OV1"/>
                             <constraint firstItem="LZn-tx-fZE" firstAttribute="top" secondItem="auw-ga-8KL" secondAttribute="bottom" constant="65" id="7C1-uT-gKg"/>
@@ -137,11 +121,12 @@
                             <constraint firstItem="lut-FP-3re" firstAttribute="top" secondItem="LDy-ih-0nr" secondAttribute="top" constant="150" id="Ebf-dL-tO7"/>
                             <constraint firstItem="LZn-tx-fZE" firstAttribute="height" secondItem="m40-gw-cwu" secondAttribute="height" id="G1O-Mm-v5h"/>
                             <constraint firstItem="auw-ga-8KL" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="IOD-bT-YAM"/>
+                            <constraint firstItem="Pbg-QP-2Vq" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="25" id="KIw-sM-9nu"/>
                             <constraint firstItem="avH-Pd-917" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="LkF-eN-uut"/>
                             <constraint firstItem="cNg-9A-Xs3" firstAttribute="height" secondItem="m40-gw-cwu" secondAttribute="height" id="N8E-WF-Snf"/>
                             <constraint firstItem="cNg-9A-Xs3" firstAttribute="width" secondItem="m40-gw-cwu" secondAttribute="width" id="PD0-7J-qCH"/>
                             <constraint firstItem="LZn-tx-fZE" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="UOh-aB-f1Z"/>
-                            <constraint firstItem="FXv-Bh-5cL" firstAttribute="top" secondItem="6ZG-Jx-Hv9" secondAttribute="bottom" constant="75" id="Yto-VX-MdD"/>
+                            <constraint firstItem="FXv-Bh-5cL" firstAttribute="top" secondItem="6ZG-Jx-Hv9" secondAttribute="bottom" constant="75" id="Yto-VX-MdD" userLabel="Quantity Label.top = Order Label.bottom + 100"/>
                             <constraint firstItem="2eY-6k-9HP" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="Znm-7a-ZXG"/>
                             <constraint firstItem="StW-b6-5MJ" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="ahN-OK-a86"/>
                             <constraint firstItem="cNg-9A-Xs3" firstAttribute="top" secondItem="m40-gw-cwu" secondAttribute="bottom" constant="65" id="bRT-rS-13t"/>
@@ -157,6 +142,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
+                        <outlet property="backButtonOutlet" destination="Pbg-QP-2Vq" id="s6E-53-58a"/>
                         <outlet property="confirmOrderOutlet" destination="avH-Pd-917" id="Q7V-XM-we4"/>
                         <outlet property="foodButtonOutlet" destination="lut-FP-3re" id="QfS-HA-8YP"/>
                         <outlet property="foodTutorialsOutlet" destination="StW-b6-5MJ" id="nS0-QI-4L1"/>
@@ -178,11 +164,11 @@
             <objects>
                 <viewController id="haA-bl-3nG" customClass="FoodTutorialsViewController" customModule="iMessage_Ext" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgS-s1-qDR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for breakfast recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nrr-wy-4aO">
-                                <rect key="frame" x="12" y="280.5" width="390" height="45"/>
+                                <rect key="frame" x="12" y="253.5" width="390" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -190,7 +176,7 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for lunch recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Du-0e-rKm">
-                                <rect key="frame" x="32" y="425.5" width="350.5" height="45"/>
+                                <rect key="frame" x="32" y="398.5" width="350.5" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -198,7 +184,7 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Click here for dinner recipe videos" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Qs-u5n">
-                                <rect key="frame" x="27.5" y="570.5" width="359" height="45"/>
+                                <rect key="frame" x="27.5" y="543.5" width="359" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
